@@ -423,6 +423,7 @@ a, a:visited {
 
 /* Game Navigation */
 #game-navigation {
+	background-color: rgba(145, 145, 145, 0.1);
 	width: calc(15% - 20px);
 	margin-right: 0;
 	position: -webkit-sticky;
@@ -444,6 +445,7 @@ a, a:visited {
 	margin-bottom: 20px;
 	text-align: center;
 	text-decoration: underline;
+	color: #E7E2DA
 }
 
 .munkbutton {
