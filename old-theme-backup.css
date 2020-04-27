@@ -1,0 +1,531 @@
+@import url("default-theme.css");
+
+body {
+	background-image: url('./images/lines-BG.jpg');
+	font-family: 'Segoe UI', sans-serif;
+	font-size: 2em;
+	color: #FFF;
+	line-height: 1.2em;
+	margin-top: -9px;
+}
+
+td, tr, th { vertical-align: middle !important; }
+
+a { 
+	color: #E7E2DA; 
+	text-decoration: none;
+}
+
+form input[type="text"] { 
+	width: 25px; 
+	height: 18px;
+	border-radius: 2px;
+}
+
+form input[type="submit"] {
+	border: 0 none;
+	border-radius: 5px;
+	background-color: #2C86C7;
+	color: #E7E2DA;
+	width: 660px;
+	text-align: center;
+	padding: 1em;
+	font-size: 1.4em;
+	text-transform: capitalize;
+	margin: 0.5em 0 1em 0.55em;
+	transition-duration: 1s;
+}
+
+form input[type="submit"]:hover, #change-kingdom-button:hover { background-color: #224B80; }
+
+.game-content thead { background-color: rgba(38, 38, 38, 0.85); }
+.game-content tr:nth-child(even) { background-color: rgba(38, 38, 38, 0.85); }
+
+.game-content form p { margin-left: 20px; }
+.game-content form p input { margin-left: 0; }
+
+
+/* Lobby Page */
+#account-details {
+	background-color: #262626;
+	border: 1px dashed grey;
+}
+
+#account-details .account-title a,
+#account-details .account-signout a { margin-left: -5px; }
+
+#id_first_name, #id_last_name, #id_email_address, #id_city, #id_custom_css_theme {
+	width: 387px;
+	text-align: left;
+}
+
+input[value="Apply"] { width: 387px !important; }
+
+#id_old_password, #id_new_password1, #id_new_password2 { margin: 5px 0 5px 10px; }
+
+.lobby-panel h1 { text-align: center; }
+
+.lobby-panel p {
+	padding: 1em;
+	text-align: justify;
+}
+
+input[value="Publish Theme"] {
+	width: 600px !important;
+	margin-left: 0 !important;
+}
+
+.page-summary {
+	margin-left: 167px;
+	text-align: center;
+}
+
+.error { margin-left: 150px; }
+.lobby-panel table { text-align: center; }
+.lobby-panel th { text-align: right; }
+.lobby-panel td { text-align: left; }
+#id_username, #id_password { width: 200px; }
+.lobby-panel { margin-left: 150px; }
+.lobby-panel .divider { display: none; }
+.lobby-panel h2 {
+	font-size: 1em;
+	margin: 1em;
+}
+
+#id_name, #id_leader_name { width: 190px; }
+
+
+/* Throne Page */
+#header { 
+	width: 922px !important;
+	margin-left: 8px;
+	position: relative !important;
+	background-color: rgba(145, 145, 145, 0.1);
+}
+
+#header-navigation { tex-align: center; }
+
+#header2 { display: none; }
+
+#middle {
+	background-image: none;
+	box-shadow: none;
+}
+
+#resource-bar, .game-header, .game-content, .two-column-stats { 	
+	width: 690px !important;
+	margin: 0 auto;
+	float: left;
+}
+
+#resource-bar {
+	border: 1px solid grey;
+	font-size: 0.9em;
+	line-height: 2em;
+	height: 4em;
+}
+
+#resource-bar thead tr th { font-weight: bold; }
+
+.game-header h1 { 
+	display: inline-block; 
+	float: none; 
+	font-size: 1.2em; 
+	margin: 1em;
+}
+
+#throne-game-message p, #throne-monarch-message p {
+	background-color: rgba(145, 145, 145, 0.1);
+	border-radius: 5px;
+	padding: 1em;
+	margin-top: -0.5em;
+}
+
+#throne-monarch-message p { font-weight: bold; }
+
+.game-content h2 { 
+	font-size: 1.3em;
+	line-height: 1.3em;
+	padding: 1em 0;
+}
+
+.game-content table {
+	background-color: rgba(145, 145, 145, 0.1);
+	border: none !important;
+	border-radius: 5px;
+	padding: 1em;
+	width: 660px !important;
+	margin-left: 20px !important;
+	margin-bottom: 1em !important;
+}
+
+.game-content p { 
+	border: none !important;
+	text-align: justify;
+}
+
+.two-column-stats tbody { padding: 1em 0; margin-bottom: 1em; }
+
+.game-content table.two-column-stats th { 
+	text-align: left;
+	width: 20%;
+}
+
+#game-navigation {
+	background-color: rgba(145, 145, 145, 0.1);
+	line-height: 1em;
+	padding-top: 1em;
+	border-radius: 5px;
+}
+
+#game-navigation-right2 { 
+	background-color: rgba(145, 145, 145, 0.1);
+	height: auto !important;
+	width: 100px !important;
+	margin-left: -40px;
+	line-height: 1.7em; 
+	border-radius: 5px;
+}
+
+#game-navigation-right2 .button-link, #game-navigation-right2 br { display: none !important; }
+
+form table { float: left; }
+
+.message { 
+	background-color: rgba(145, 145, 145, 0.1); 
+	border-radius: 5px;
+	width: 645px;
+}
+.lobby-panel a, .game-content a { color: #45ACF6; }
+.good { color: #82FA58; }
+.negative, .bad { color: #E02626; }
+
+.advice-message { 
+	color: #FFF;
+	margin-left: 150px;
+	text-align: center !important;
+}
+
+.warning { margin-left: 150px; }
+
+
+/* Kingdom Page */
+.game-content form.change-kingdom .change-kingdom-heading {
+	width: 100%;
+	margin-left: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.game-content form.change-kingdom .change-kingdom-nav a { font-size: 0.8em; }
+
+.game-content form.change-kingdom .change-kingdom-form { top: 20px !important; }
+
+.game-content form.change-kingdom.change-kingdom-target #change-kingdom-button { top: 0px; }
+
+#change-kingdom-button { 
+	width: 30px; 
+	margin: 0 5px; 
+	height: 24px !important;
+	border: 0 none;
+	border-radius: 2px;
+	background-color: #2C86C7;
+	color: #E7E2DA;
+	padding: 0;
+	font-size: 1em;
+}
+
+span[class="advice-message"] { margin-left: 0; }
+
+.province-flag .flagpole { background: url('./images/province_profile/flagpole.png') no-repeat; }
+.province-flag .flag-image .default-flag { background: url('./images/province_profile/default_flag.png') no-repeat; }
+.motto { background: url('./images/province_profile/scroll.png') no-repeat; }
+
+#sortkd0, #sortkd1, #sortkd2, #sortkd3, 
+#sortkd4, #sortkd5, #sortkd6, #sortkd7, 
+.province-name a { color: #FFF; }
+
+.protected, .protected a,
+.intel-fresh { color: #99ffbb !important; }
+.monarch, .monarch a,
+.at-war,
+.intel-rotten { color: #F28585 !important; }
+.chamberlain, .chamberlain a,
+.intel-stale { color: #FFC583 !important; }
+.you, .you a { color: #45acf6 !important; }
+
+.dip-status { color: #000; }
+
+.dip-status-NORMAL { background-color: #01DF01; }
+
+.dip-status-UNFRIENDLY { background-color: #FFBF00; }
+
+.dip-status-HOSTILE {
+    background-color:#FF4000;
+    background-image: url(./images/hostile_meter/hostile_gradient.png);
+    background-repeat:repeat-y;
+}
+
+.dip-status-WAR { background-color: #FF0000; }
+
+.own-meter-value { background-image: url(./images/hostile_meter/up.png); }
+
+.their-meter-value { background-image: url(./images/hostile_meter/down.png); }
+
+.war-button-meter-value { background-image: url(./images/hostile_meter/war.png); }
+
+#hostility-meter-example { background-image: url(./images/hostile_meter/example.png); }
+
+#id_taunt_top_image { color: white; }
+
+
+/* News Page */
+td.news-incident-type {
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+}
+
+.news-legend span.news-aid:before { content: url(./images/kingdom_news/aid_inline.png); }
+.news-legend span.news-intra-kingdom-conflict:before { content: url(./images/kingdom_news/intra_kingdom_conflict_inline.png); }
+.news-legend span.news-actions-against-our-kingdom:before { content: url(./images/kingdom_news/actions_against_our_kingdom_inline.png); }
+.news-legend span.news-actions-by-our-kingdom:before { content: url(./images/kingdom_news/actions_by_our_kingdom_inline.png); }
+.news-legend span.news-dragon:before { content: url(./images/kingdom_news/dragon_inline.png); }
+.news-legend span.news-obituaries:before { content: url(./images/kingdom_news/obituaries_inline.png); }
+.news-legend span.news-relations:before { content: url(./images/kingdom_news/relations_inline.png); }
+.news-province-modification:before { content: url(./images/kingdom_news/province_modification_inline.png); }
+td.news-aid { background-image: url(./images/kingdom_news/aid.png); }
+td.news-intra-kingdom-conflict { background-image: url(./images/kingdom_news/intra_kingdom_conflict.png); }
+td.news-actions-against-our-kingdom { background: url(./images/kingdom_news/actions_against_our_kingdom.png); }
+td.news-actions-by-our-kingdom { background-image: url(./images/kingdom_news/actions_by_our_kingdom.png); }
+td.news-dragon { background-image: url(./images/kingdom_news/dragon.png); }
+td.news-obituaries { background-image: url(./images/kingdom_news/obituaries.png); }
+td.news-relations { background-image: url(./images/kingdom_news/relations.png); }
+td.news-province-modification { background-image: url(./images/kingdom_news/province_modification.png); }
+
+.news-incident-report { 
+	text-align: left;
+	line-height: 2em;
+}
+
+
+/* Explore Page */
+#btnExplore { width: 460px; }
+#id_num_acres { width: 50px; }
+
+
+/* Science Page */
+.four-digit-input { width: 50px !important; }
+
+
+/* Military Page */
+.selector { background: none; }
+
+
+/* Mystics Page */
+label[for="id_spell"] {
+	position: absolute;
+	left: 158px;
+	margin: -30px 0 0 14px;
+}
+
+.selector { font-size: 1em !important; }
+
+#id_spell, #id_operation { 
+	margin: 0 0 0 3px;
+	border-radius: 5px;
+	border: none;
+	padding: 0.2em;
+    font-size: 0.7em;
+    text-align: center;
+    width: 190px;
+}
+
+#uniform-id_spell { margin-top: 10px; }
+#uniform-id_target_province select, #uniform-id_attack_type select, #uniform-id_modify_attack_time select { margin-left: 3px !important; }
+#uniform-id_target_province select option, #uniform-id_attack_type select option, #uniform-id_modify_attack_time select  option { padding-left: 1em; }
+#id_spell optgroup { padding-top: 0em; }
+#id_spell optgroup option, #id_operation optgroup option { 
+	padding: 0.5em 0 0 1em;
+	text-align: left;
+}
+
+.helptext { font-size: 0.8em; }
+
+
+/* Sorcery Page */
+.game-content form.change-kingdom.change-kingdom-target .change-kingdom-form {
+	position: relative;
+	width: 100%;
+	top: 0 !important;
+}
+
+label[for="id_target_province"] { white-space: nowrap; }
+
+#uniform-id_target_province { margin-left: 8px; }
+
+
+/* Thievery Page */
+form input[id="id_quantity"] { 
+	width: 60px !important;
+	margin-left: 10px;
+}
+
+#idallyourthieves {
+	width: 37px;
+	text-align: center;
+	margin-right: 7px;
+}
+
+
+/* War Room Page */
+tr#calculator-separator { border: 1px dashed #fff; }
+#id_find_target { width: 300px; }
+.five-digit-input { width: 100px !important; }
+
+
+/* Aid */
+.six-digit-input { width: 100px !important; }
+
+
+/* Mail */
+#id_subject { margin-right: 24px; }
+
+
+/* Forum */
+.subject, #id_subject { width: 551px !important; }
+.wysiwyg { margin-right: 24px;}
+
+.mail-view p { 
+	margin-left: 0;
+	text-align: left;
+}
+
+.mail-view #news { 
+	width: 460px !important;
+	font-size: 0.8em;
+}
+
+body[class="wysiwyg"] { font-size: 0.9em; }
+
+input[value="Unstick"], input[value="Stick"], input[value="Close"], input[value="Delete"] {
+	background-color: transparent !important;
+	color: #45acf6 !important;
+	font-size: 0.8em !important;
+	margin: 0.1em !important;
+	padding: 0.1em !important;
+	width: 40px !important;
+}
+
+.forum-delete-button {
+	position: relative;
+	bottom: -9px;
+	left: -5px;
+}
+
+.forum-edit-button {
+	font-size: 0.8em;
+}
+
+
+/* Preferences Page */
+.preference-box p { margin-left: 30px; }
+
+
+/* State Page */
+.sub-total { background-color: rgba(145, 145, 145, 0.1) !important; }
+
+li[class="advice-message"] { margin-left: 100px; }
+
+
+/* Learn Page */
+.schedule td { font-size: 0.7em; }
+
+
+/* Monarchy */
+#id_monarch_option-name { width: 450px; }
+
+#id_monarch_option-message {
+	width: 450px;
+	padding: 1em;
+	font-size: 1em;
+}
+
+#id_propose-kingdom { margin: 0 5px; }
+
+
+/* Chat */
+.reverb-widget {
+	bottom: 0 !important;
+	top: auto !important;
+	box-shadow: unset !important;
+}
+
+.reverb-widget iframe { height: 375px !important; }
+
+
+/* Upoopu */
+#upoopu_extension, #upoopu_extension_credentials { top: 0; }
+
+
+/* Ultima */
+form input[type="submit"], .button-link {
+	border-radius: 5px;
+	border: none;
+}
+
+#Uniquestextarea {
+	width: 660px !important;
+	margin-left: 10px;
+	border-radius: 5px;
+	color:#000 !important;
+}
+
+#ID_Uniques1, #ID_Uniques2, #ID_Uniques3 { margin: 5px; }
+
+#SpellsList { 
+	float: left; 
+	width: 100%;
+}
+
+#SpellsList .good { color: #82FA58; }
+#SpellsList .bad { color: #E02626; }
+
+#SpellsList table {
+	width: auto !important;
+	background-color: transparent;
+}
+
+
+/* uTools */
+th[colspan="7"] { display: none; }
+#rescell1, #rescell2, #rescell3 {
+	background-color: #262626 !important;
+	text-align: center !important;
+	padding: 5px 0;
+	border-bottom: 1px solid grey;
+}
+
+#rescell2 { padding-left: 50px; }
+
+#spnWait { line-height: 2em; }
+
+#spnWait table { 
+	width: inherit !important;
+	margin-right: 15px !important;
+}
+
+#spnWait thead th { white-space: nowrap; }
+
+#divFilterKDNews { border: none !important; }
+#divFilterKDNews span { font-size: 0.8em; }
+
+.checker {
+	border: none;
+	padding-left: 15px;
+}
+
+/* Test */
+body {
+	background: #222222;
+}

@@ -1,0 +1,904 @@
+@import url("default-theme.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap');
+
+/* Global */
+body {
+	background: #111111;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.5rem;
+	letter-spacing: 0.1px;
+	color: #eeeeee;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+li {
+	list-style-type: none;
+}
+
+td br {
+	display: none;
+}
+
+label {
+	white-space: nowrap;
+}
+
+thead th {
+	font-weight: bold;
+	color: #ffd17a;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	white-space: nowrap;
+}
+
+.selector {
+	padding-left: 0 !important;
+	width: 179px !important;
+	font-size: 1.2rem !important;
+	border-radius: 5px;
+	text-indent: 10px;
+}
+
+input {
+	border: none;
+	outline: none;
+	font-family: 'Quicksand', sans-serif;
+	padding: 3px !important;
+	margin: 0 1px !important;
+	border-radius: 3px;
+}
+
+input[type="checkbox"] {
+	height: 15px;
+	vertical-align: middle;
+}
+
+input:focus {
+	border: none;
+	padding: 0 3px !important;
+	height: 22px;
+}
+
+.two-digit-input, .four-digit-input {
+	width: 45px;
+}
+
+.three-digit-input {
+	width: 173px;
+}
+
+.max {
+	padding: 3px 5px;
+}
+
+form p {
+	text-align: center !important;
+	text-transform: uppercase;
+	color: #ffd17a;
+	font-size: 0.8em;
+	letter-spacing: 0.5px;
+}
+
+input[type=submit] {
+	text-align: center !important;
+	background: #ffd17a;
+	border-radius: 5px;
+	outline: none;
+	text-transform: uppercase;
+	width: 100%;
+	height: 40px;
+	font-size: 2.5rem !important;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.repeat {
+	margin-bottom: 20px;
+}
+
+button {
+	border: none;
+	border-bottom: 1px dashed gray;
+	background: transparent;
+	font-family: 'Quicksand', sans-serif;
+	cursor: pointer;
+	padding: 0;
+	margin: 0 5px;
+}
+
+a, a:visited {
+	color: #ffd17a;
+	text-decoration: none;
+}
+
+/* Ads */
+.google_ads {
+	margin: 10px auto 0px;
+	margin-left: auto !important;
+	height: auto !important;
+	padding-top: 0 !important;
+}
+
+/* Layout */
+#inner-container {
+	width: 90%;
+	position: unset;
+	margin-top: 0;
+	padding: 0 30px;
+}
+
+#middle {
+	overflow: inherit;
+	min-height: calc(100vh - 150px);
+}
+
+#content-area {
+	padding-top: 5px !important;
+}
+
+#left-column {
+	width: 100%;
+	float: none;
+}
+
+.game-content {
+	width: 70%;
+	padding: 0;
+	margin-left: 15%;
+	float: none;
+	font-size: 1.4rem;
+}
+
+/* Account */
+#account-container {
+	position: unset;
+}
+
+#account-header {
+	top: 1px;
+	right: 5%;
+}
+
+#account-header .down-arrow {
+	top: 15px;
+}
+
+#account-details {
+	background: #111111;
+	line-height: 2em;
+	padding: 10px 15px;
+	right: calc(5% + 10px);
+	top: 35px;
+	border: 1px dashed gray;
+}
+
+#account-details .account-title {
+	padding: 0;
+	margin-bottom: 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	border-bottom: 1px solid #eeeeee;
+}
+
+#account-details .account-summary {
+	margin-bottom: 10px;
+}
+
+#account-details .account-signout {
+	padding: 0;
+	margin-top: 10px;
+}
+
+.account-name {
+	margin: 5px 15px;
+	text-transform: uppercase;
+}
+
+.page-summary {
+	text-align: center;
+	margin: 20px auto;
+}
+
+.lobby-panel {
+	width: 50%;
+}
+
+.lobby-panel .form {
+	width: 100%;
+}
+
+.lobby-panel .selector {
+	margin-right: 5px;	
+}
+
+.lobby-panel input[type=text] {
+	width: 172px;
+}
+
+/* Top Navigation */
+#header {
+	height: 40px;
+	width: auto;
+	font-size: 0.7em;
+	margin-left: 5px;
+	padding-top: 30px;
+}
+
+#header-navigation, #header-navigation-2nd-level {
+	position: unset;
+	width: auto;
+	text-transform: uppercase;
+}
+
+#header-navigation div, #header-navigation-2nd-level div {
+	margin: 9px 5px;
+}
+
+#header a, #header a:visited {
+	color: #eeeeee;
+	text-decoration: none;
+}
+
+.navigation {
+	padding: 0;
+}
+
+/* Lobby */
+#chooser-nav {
+	width: 100%;
+}
+
+.chooser-nav-class, #chooser-nav .divider {
+	display: none;
+}
+
+#chooser-nav {
+	margin: 3% 0;
+}
+
+#chooser-nav h1 {
+	font-size: 2.5rem;
+	margin: 0 0 15px 0;
+}
+
+.divider {
+	height: 5px;
+}
+
+/* Bot Intel */
+#toggler {
+	background-color: #111111 !important;
+	border: 1px solid gray;
+	border-radius: 0 !important;
+	top: 9px !important;
+	left: 5% !important;
+	margin-left: calc(5% + 10px) !important;
+	text-transform: uppercase;
+	padding: 0 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.6em !important;
+	letter-spacing: 2px;
+	line-height: 2em;
+	width: 83px !important;
+	position: -webkit-sticky !important;
+	position: sticky !important;
+	margin-top: -1000% !important;
+	z-index: 2 !important;
+	margin-bottom: -100%;
+}
+
+#botlinks, #botupdate {
+	left: calc(5% + 104px) !important;
+	top: 10px !important;
+	border-radius: 0 !important;
+	margin-left: calc(5% + 104px) !important;
+	background: #111111;
+	border: none;
+	outline: 1px dashed #ffd17a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.6em !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 0 5px;
+	line-height: 2em;
+	position: -webkit-sticky !important;
+	position: sticky !important;
+	z-index: 1 !important;
+	width: max-content;
+	color: #ffd17a;
+	margin-bottom: -1000%;
+}
+
+/* Chat */
+#ircchat {
+	width: calc(100% - 10px) !important;
+	border-radius: 5px;
+	background-color: #eeeeee !important;
+	color: #111111 !important;
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
+	padding: 0 !important;
+	margin-bottom: 10px;
+}
+
+#ircchat table {
+	border-collapse: separate !important;
+	border-spacing: 5px !important;
+}
+
+#irconline {
+	padding: 8px 0 0 10px;
+	line-height: 1.5em;
+	width: calc(20% - 10px) !important;
+	font-size: 1rem;
+}
+
+#irconline hr {
+	width: 93%;
+	margin-left: 0;
+}
+
+#ircchat center {
+	padding: 0 0 8px 0;
+	margin-top: -10px;
+}
+
+#ircchat input {
+	width: 35%;
+	border: 1px dashed gray;
+}
+
+#irccontainer {
+	border: none !important;
+	padding: 0 0 0 5px;
+	width: calc(100% - 5px) !important;
+}
+
+/* Resource Bar */
+#resource-bar {
+	width: 70%;
+	margin-left: 15%;
+	/* margin-top: -780px; */
+	margin-bottom: 15px;
+}
+
+#resource-bar tbody {
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+
+/* Bot Commands */
+#overlay {
+	width: 70% !important;
+	margin-top: 0 !important;
+	margin-left: auto !important;
+	float: none !important;
+	color: #111111 !important;
+	text-align: center !important;
+	line-height: 35px;
+	border-radius: 5px;
+	font-size: 1rem;
+	padding-top: 3px;
+}
+
+#overlay input {
+	width: 40%;
+	margin: 0 5px;
+	border: 1px dashed gray;
+}
+
+#overlay table {
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+}
+
+/* Game Header */
+.game-header {
+	width: 70%;
+	float: none;
+	background: #222222;
+	margin: 15px auto 10px;
+	white-space: nowrap;
+}
+
+.game-header h1, .game-header a {
+	display: inline-block;
+	float: none;
+	margin: 0 2px;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	padding: 5px 0;
+}
+
+/* Game Navigation */
+#game-navigation {
+	width: calc(15% - 20px);
+	margin-right: 0;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 40px;
+	font-size: 1.6rem;
+	line-height: 1.7rem;
+}
+
+#game-navigation .current-date {
+	margin-bottom: 20px;
+	text-align: left;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+#game-navigation .navigation {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.munkbutton {
+	outline: none;
+	border-radius: 3px;
+	margin: 0 0 5px 0 !important;
+}
+
+#game-navigation img {
+	height: 14px !important;
+	margin: 0 2px;
+}
+
+/* Throne */
+#orders a {
+	font-size: 1.2rem;
+	margin: 5px;
+}
+
+#throne-game-message, #throne-monarch-message {
+	font-size: 1.4rem;
+	outline: 1px dashed #ffd17a;
+	padding: 10px;
+	overflow: auto;
+}
+
+#throne-game-message {
+	margin-top: 20px;
+}
+
+#throne-monarch-message {
+	margin: 20px 0;
+}
+
+.game-content h2 {
+	text-transform: uppercase;
+	margin: 5px 0 !important;
+	font-size: 1.5rem;
+}
+
+.game-content tr:nth-child(even) {
+	background-color: #222222;
+}
+
+.game-content .advice-message {
+	text-align: center;
+	margin: 30px 0;
+	font-size: 1.4rem;
+}
+
+.game-content .throne-notice, .game-content p {
+	margin: 0 10px 15px;
+}
+
+.game-content table.three-column-stats th {
+	text-align: center !important;
+}
+
+/* Kingdom */
+.game-content form.change-kingdom.change-kingdom-target #change-kingdom-button {
+	margin: 0;
+	position: static;
+}
+
+input[name=change_kingdom] {
+	font-size: 1.4rem !important;
+	width: 35px !important;
+	height: 22px !important;
+	border-radius: 3px !important;
+	margin-left: 5px !important;
+	padding: 0 !important;
+}
+
+.change-kingdom-heading {
+	width: 80% !important;
+	padding: 5px;
+	margin: 5px;
+}
+
+.change-kingdom-nav {
+	width: 100%;
+	text-align: center;
+}
+
+.change-kingdom-nav a {
+	width: 70px !important;
+	font-size: 1.3rem !important;
+	margin: 0 20px;
+}
+
+.change-kingdom-form {
+	top: 3px !important;
+	width: 20%;
+}
+
+.game-content table.two-column-stats th, .game-content table.two-column-stats td {
+	width: 25%;
+	font-size: 1.4rem;
+}
+
+.game-content th, .game-content td {
+	padding: 5px;
+	font-size: 1.2rem;
+}
+
+#clone_kingdom td {
+	padding: 5px 0;
+}
+
+#clone_kingdom th {
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.order-icon {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+.order-icon::before {
+	content: "⇅";
+	font-weight: normal;
+	padding-left: 2px;
+}
+
+/* Kingdom Intel */
+#newintel {
+	max-height: 80vh;
+}
+
+#newintel .header th, #newintel td {
+	font-size: 1rem;
+	letter-spacing: 1.5px;
+}
+
+#newintel td font {
+	color: #eeeeee !important;
+}
+
+#newintel td img {
+	display: none;
+}
+
+#newintel .header th {
+	padding: 0 10px;
+}
+
+#newintel .header .order-icon {
+	display: inline-block;
+}
+
+#newintel tr {
+	color: #eeeeee !important;	
+}
+
+#newintel tr:nth-child(odd) {
+	background-color: #111111 !important;	
+}
+
+#newintel tr:nth-child(even) {
+	background-color: #222222 !important;	
+}
+
+/* News */
+.news-legend {
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
+#news {
+	margin-top: 15px;
+}
+
+.news-legend span {
+	font-size: 1rem;
+	margin: 0 5px
+}
+
+.news-intra-kingdom-conflict::before {
+	content: "✁";
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-relations::before {
+	content: "☮";
+	color: #ffed78;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-actions-against-our-kingdom::before {
+	content: "⚔";
+	color: #f56767;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-dragon::before {
+	content: "♅";
+	color: #a1e882;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-ritual::before {
+	content: "☥";
+	color: #ffd278;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-actions-by-our-kingdom::before {
+	content: "⚔";
+	color: #6bdfff;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-aid::before {
+	content: "✛";
+	color: #ff9999;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-obituaries::before {
+	content: "✝";
+	color: #bababa;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-province-modification::before {
+	content: "⚒";
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-incident-type {
+	height: 20px;
+	width: 20px;
+	padding: 0 0 0 8px !important;
+	font-size: 1.6rem;
+}
+
+.news-incident-date {
+	width: 136px;
+}
+
+.news-incident-report {
+	text-align: left;
+}
+
+/* Explore */
+#btnExplore {
+	width: 168%;
+	margin-left: -68% !important;
+	margin-bottom: 0;
+}
+
+/* Growth */
+#hideshow {
+	margin: 20px !important;
+}
+
+/* Sciences */
+input[name="reassign"], input[name="allocate"] {
+	margin-bottom: 50px !important;
+}
+
+.scientist-type div.selector select, .scientist-type div.selector option, .scientist-type div.selector span {
+	width: 158px !important;
+}
+
+/* Military */
+.data th {
+	font-size: 1rem !important;
+	font-weight: normal !important;
+}
+
+/* Wizards */
+.game-content ul {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+
+/* Mystics */
+.helptext {
+	font-size: 1rem;
+	display: block;
+}
+
+#spellslist {
+	margin-top: 20px;
+}
+
+/* Thievery */
+form [id='10thief'], form [id='10proc'], form [id='100proc'], #calc { 
+	font-size: 1.3rem !important;
+	width: 65px !important;
+	height: 22px !important;
+	padding: 0 !important;
+	margin: 0 0 3px 5px !important;
+	border-radius: 3px !important;
+}
+
+/* War Room */
+.form br {
+	display: block;
+}
+
+#autodef {
+	margin-right: 4px important!;
+}
+
+#calculator-separator {
+	border-top: none !important;
+	outline: 1px dashed #ffd17a;
+}
+
+/* Aid */
+#showaids {
+	text-transform: none;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+
+#id_land {
+	margin-left: -32px !important;
+}
+
+/* Mail */
+strong {
+	font-size: 1.5rem;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.reportable, .mail-view {
+	width: 100% !important;
+}
+
+.formatted-text {
+	outline: 1px dashed #ffd17a;
+	padding: 15px !important;
+}
+
+.warning {
+	text-align: center !important;
+	margin: 20px 0 !important;
+}
+
+.current.page {
+	color: #ffd17a;
+	padding: 0 10px;
+}
+
+.pagination {
+	margin-bottom: 30px;
+}
+
+form input[type=submit], .button-link {
+	margin: 0 20px 0 -2px;
+	font-size: 1.3rem;
+}
+
+/* Forum */
+.game-content table.mail-view tr td {
+	font-size: 1.4rem;
+	padding: 10px;
+}
+
+#id_subject {
+	width: 99%;
+}
+
+#id_body {
+	width: 95%;
+	outline: none;
+}
+
+.mail-view br {
+	display: block;
+}
+
+.mail-view p {
+	margin: 0;
+}
+
+/* Preferences */
+.preference-box h3 {
+	margin: 0 10px !important;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+.preference-box {
+	outline: 1px dashed;
+	padding: 10px 0 !important;
+	margin: 15px 0 !important;
+}
+
+.preference-box .advice-message {
+	margin: 10px 0 !important;
+}
+
+/* Misc. */
+#loadstatus {
+	outline: 1px dashed;
+	width: 70%;
+	margin: 10px auto;
+	text-transform: uppercase;
+	padding: 0 0 22px 0;
+	color: #ffd17a;
+}
+
+.message {
+	outline: 1px dashed;
+	padding: 2em;
+}
+
+#right-column {
+	width: 15%;
+	margin-top: -620px;
+}
+
+.advice-message {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.4rem;
+	font-weight: normal;
+}
+
+.good, .protected, .advice-message {
+	color: #a1e882;
+}
+
+.bad, .monarch, .negative, .warning {
+	color: #f56767;
+}
+
+.you {
+	color: #ffed78;
+}
+
+.chamberlain {
+	color: #ffd278;
+}
+
+#aidnum {
+	color: #f56767;
+	letter-spacing: 1px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+#footer {
+	width: auto;
+	font-size: 0.7em;
+}
