@@ -1,533 +1,904 @@
 @import url("default-theme.css");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap');
 
-
+/* Global */
 body {
-	background-image: url('./images/lines-BG.jpg');
+	background: #111111;
 	font-family: 'Quicksand', sans-serif;
-	font-size: 2em;
-	color: #FFF;
-	line-height: 1.2em;
-	margin-top: -9px;
+	font-size: 1.5rem;
+	letter-spacing: 0.1px;
+	color: #eeeeee;
 }
 
-td, tr, th { vertical-align: middle !important; }
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+}
 
-a { 
-	color: #E7E2DA; 
+h2 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+li {
+	list-style-type: none;
+}
+
+td br {
+	display: none;
+}
+
+label {
+	white-space: nowrap;
+}
+
+thead th {
+	font-weight: bold;
+	color: #ffd17a;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	white-space: nowrap;
+}
+
+.selector {
+	padding-left: 0 !important;
+	width: 179px !important;
+	font-size: 1.2rem !important;
+	border-radius: 5px;
+	text-indent: 10px;
+}
+
+input {
+	border: none;
+	outline: none;
+	font-family: 'Quicksand', sans-serif;
+	padding: 3px !important;
+	margin: 0 1px !important;
+	border-radius: 3px;
+}
+
+input[type="checkbox"] {
+	height: 15px;
+	vertical-align: middle;
+}
+
+input:focus {
+	border: none;
+	padding: 0 3px !important;
+	height: 22px;
+}
+
+.two-digit-input, .four-digit-input {
+	width: 45px;
+}
+
+.three-digit-input {
+	width: 173px;
+}
+
+.max {
+	padding: 3px 5px;
+}
+
+form p {
+	text-align: center !important;
+	text-transform: uppercase;
+	color: #ffd17a;
+	font-size: 0.8em;
+	letter-spacing: 0.5px;
+}
+
+input[type=submit] {
+	text-align: center !important;
+	background: #ffd17a;
+	border-radius: 5px;
+	outline: none;
+	text-transform: uppercase;
+	width: 100%;
+	height: 40px;
+	font-size: 2.5rem !important;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.repeat {
+	margin-bottom: 20px;
+}
+
+button {
+	border: none;
+	border-bottom: 1px dashed gray;
+	background: transparent;
+	font-family: 'Quicksand', sans-serif;
+	cursor: pointer;
+	padding: 0;
+	margin: 0 5px;
+}
+
+a, a:visited {
+	color: #ffd17a;
 	text-decoration: none;
 }
 
-form input[type="text"] { 
-	width: 25px; 
-	height: 18px;
-	border-radius: 2px;
+/* Ads */
+.google_ads {
+	margin: 10px auto 0px;
+	margin-left: auto !important;
+	height: auto !important;
+	padding-top: 0 !important;
 }
 
-form input[type="submit"] {
-	border: 0 none;
-	border-radius: 5px;
-	background-color: #2C86C7;
-	color: #E7E2DA;
-	width: 660px;
-	text-align: center;
-	padding: 1em;
-	font-size: 1.4em;
-	text-transform: capitalize;
-	margin: 0.5em 0 1em 0.55em;
-	transition-duration: 1s;
+/* Layout */
+#inner-container {
+	width: 90%;
+	position: unset;
+	margin-top: 0;
+	padding: 0 30px;
 }
 
-form input[type="submit"]:hover, #change-kingdom-button:hover { background-color: #224B80; }
+#middle {
+	overflow: inherit;
+	min-height: calc(100vh - 150px);
+}
 
-.game-content thead { background-color: rgba(38, 38, 38, 0.85); }
-.game-content tr:nth-child(even) { background-color: rgba(38, 38, 38, 0.85); }
+#content-area {
+	padding-top: 5px !important;
+}
 
-.game-content form p { margin-left: 20px; }
-.game-content form p input { margin-left: 0; }
+#left-column {
+	width: 100%;
+	float: none;
+}
 
+.game-content {
+	width: 70%;
+	padding: 0;
+	margin-left: 15%;
+	float: none;
+	font-size: 1.4rem;
+}
 
-/* Lobby Page */
+/* Account */
+#account-container {
+	position: unset;
+}
+
+#account-header {
+	top: 1px;
+	right: 5%;
+}
+
+#account-header .down-arrow {
+	top: 15px;
+}
+
 #account-details {
-	background-color: #262626;
-	border: 1px dashed grey;
+	background: #111111;
+	line-height: 2em;
+	padding: 10px 15px;
+	right: calc(5% + 10px);
+	top: 35px;
+	border: 1px dashed gray;
 }
 
-#account-details .account-title a,
-#account-details .account-signout a { margin-left: -5px; }
-
-#id_first_name, #id_last_name, #id_email_address, #id_city, #id_custom_css_theme {
-	width: 387px;
-	text-align: left;
+#account-details .account-title {
+	padding: 0;
+	margin-bottom: 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	border-bottom: 1px solid #eeeeee;
 }
 
-input[value="Apply"] { width: 387px !important; }
-
-#id_old_password, #id_new_password1, #id_new_password2 { margin: 5px 0 5px 10px; }
-
-.lobby-panel h1 { text-align: center; }
-
-.lobby-panel p {
-	padding: 1em;
-	text-align: justify;
+#account-details .account-summary {
+	margin-bottom: 10px;
 }
 
-input[value="Publish Theme"] {
-	width: 600px !important;
-	margin-left: 0 !important;
+#account-details .account-signout {
+	padding: 0;
+	margin-top: 10px;
+}
+
+.account-name {
+	margin: 5px 15px;
+	text-transform: uppercase;
 }
 
 .page-summary {
-	margin-left: 167px;
+	text-align: center;
+	margin: 20px auto;
+}
+
+.lobby-panel {
+	width: 50%;
+}
+
+.lobby-panel .form {
+	width: 100%;
+}
+
+.lobby-panel .selector {
+	margin-right: 5px;	
+}
+
+.lobby-panel input[type=text] {
+	width: 172px;
+}
+
+/* Top Navigation */
+#header {
+	height: 40px;
+	width: auto;
+	font-size: 0.7em;
+	margin-left: 5px;
+	padding-top: 30px;
+}
+
+#header-navigation, #header-navigation-2nd-level {
+	position: unset;
+	width: auto;
+	text-transform: uppercase;
+}
+
+#header-navigation div, #header-navigation-2nd-level div {
+	margin: 9px 5px;
+}
+
+#header a, #header a:visited {
+	color: #eeeeee;
+	text-decoration: none;
+}
+
+.navigation {
+	padding: 0;
+}
+
+/* Lobby */
+#chooser-nav {
+	width: 100%;
+}
+
+.chooser-nav-class, #chooser-nav .divider {
+	display: none;
+}
+
+#chooser-nav {
+	margin: 3% 0;
+}
+
+#chooser-nav h1 {
+	font-size: 2.5rem;
+	margin: 0 0 15px 0;
+}
+
+.divider {
+	height: 5px;
+}
+
+/* Bot Intel */
+#toggler {
+	background-color: #111111 !important;
+	border: 1px solid gray;
+	border-radius: 0 !important;
+	top: 9px !important;
+	left: 5% !important;
+	margin-left: calc(5% + 10px) !important;
+	text-transform: uppercase;
+	padding: 0 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.6em !important;
+	letter-spacing: 2px;
+	line-height: 2em;
+	width: 83px !important;
+	position: -webkit-sticky !important;
+	position: sticky !important;
+	margin-top: -1000% !important;
+	z-index: 2 !important;
+	margin-bottom: -100%;
+}
+
+#botlinks, #botupdate {
+	left: calc(5% + 104px) !important;
+	top: 10px !important;
+	border-radius: 0 !important;
+	margin-left: calc(5% + 104px) !important;
+	background: #111111;
+	border: none;
+	outline: 1px dashed #ffd17a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.6em !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 0 5px;
+	line-height: 2em;
+	position: -webkit-sticky !important;
+	position: sticky !important;
+	z-index: 1 !important;
+	width: max-content;
+	color: #ffd17a;
+	margin-bottom: -1000%;
+}
+
+/* Chat */
+#ircchat {
+	width: calc(100% - 10px) !important;
+	border-radius: 5px;
+	background-color: #eeeeee !important;
+	color: #111111 !important;
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
+	padding: 0 !important;
+	margin-bottom: 10px;
+}
+
+#ircchat table {
+	border-collapse: separate !important;
+	border-spacing: 5px !important;
+}
+
+#irconline {
+	padding: 8px 0 0 10px;
+	line-height: 1.5em;
+	width: calc(20% - 10px) !important;
+	font-size: 1rem;
+}
+
+#irconline hr {
+	width: 93%;
+	margin-left: 0;
+}
+
+#ircchat center {
+	padding: 0 0 8px 0;
+	margin-top: -10px;
+}
+
+#ircchat input {
+	width: 35%;
+	border: 1px dashed gray;
+}
+
+#irccontainer {
+	border: none !important;
+	padding: 0 0 0 5px;
+	width: calc(100% - 5px) !important;
+}
+
+/* Resource Bar */
+#resource-bar {
+	width: 70%;
+	margin-left: 15%;
+	/* margin-top: -780px; */
+	margin-bottom: 15px;
+}
+
+#resource-bar tbody {
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+
+/* Bot Commands */
+#overlay {
+	width: 70% !important;
+	margin-top: 0 !important;
+	margin-left: auto !important;
+	float: none !important;
+	color: #111111 !important;
+	text-align: center !important;
+	line-height: 35px;
+	border-radius: 5px;
+	font-size: 1rem;
+	padding-top: 3px;
+}
+
+#overlay input {
+	width: 40%;
+	margin: 0 5px;
+	border: 1px dashed gray;
+}
+
+#overlay table {
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+}
+
+/* Game Header */
+.game-header {
+	width: 70%;
+	float: none;
+	background: #222222;
+	margin: 15px auto 10px;
+	white-space: nowrap;
+}
+
+.game-header h1, .game-header a {
+	display: inline-block;
+	float: none;
+	margin: 0 2px;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	padding: 5px 0;
+}
+
+/* Game Navigation */
+#game-navigation {
+	width: calc(15% - 20px);
+	margin-right: 0;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 40px;
+	font-size: 1.6rem;
+	line-height: 1.7rem;
+}
+
+#game-navigation .current-date {
+	margin-bottom: 20px;
+	text-align: left;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+#game-navigation .navigation {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.munkbutton {
+	outline: none;
+	border-radius: 3px;
+	margin: 0 0 5px 0 !important;
+}
+
+#game-navigation img {
+	height: 14px !important;
+	margin: 0 2px;
+}
+
+/* Throne */
+#orders a {
+	font-size: 1.2rem;
+	margin: 5px;
+}
+
+#throne-game-message, #throne-monarch-message {
+	font-size: 1.4rem;
+	outline: 1px dashed #ffd17a;
+	padding: 10px;
+	overflow: auto;
+}
+
+#throne-game-message {
+	margin-top: 20px;
+}
+
+#throne-monarch-message {
+	margin: 20px 0;
+}
+
+.game-content h2 {
+	text-transform: uppercase;
+	margin: 5px 0 !important;
+	font-size: 1.5rem;
+}
+
+.game-content tr:nth-child(even) {
+	background-color: #222222;
+}
+
+.game-content .advice-message {
+	text-align: center;
+	margin: 30px 0;
+	font-size: 1.4rem;
+}
+
+.game-content .throne-notice, .game-content p {
+	margin: 0 10px 15px;
+}
+
+.game-content table.three-column-stats th {
+	text-align: center !important;
+}
+
+/* Kingdom */
+.game-content form.change-kingdom.change-kingdom-target #change-kingdom-button {
+	margin: 0;
+	position: static;
+}
+
+input[name=change_kingdom] {
+	font-size: 1.4rem !important;
+	width: 35px !important;
+	height: 22px !important;
+	border-radius: 3px !important;
+	margin-left: 5px !important;
+	padding: 0 !important;
+}
+
+.change-kingdom-heading {
+	width: 80% !important;
+	padding: 5px;
+	margin: 5px;
+}
+
+.change-kingdom-nav {
+	width: 100%;
 	text-align: center;
 }
 
-.error { margin-left: 150px; }
-.lobby-panel table { text-align: center; }
-.lobby-panel th { text-align: right; }
-.lobby-panel td { text-align: left; }
-#id_username, #id_password { width: 200px; }
-.lobby-panel { margin-left: 150px; }
-.lobby-panel .divider { display: none; }
-.lobby-panel h2 {
-	font-size: 1em;
-	margin: 1em;
+.change-kingdom-nav a {
+	width: 70px !important;
+	font-size: 1.3rem !important;
+	margin: 0 20px;
 }
 
-#id_name, #id_leader_name { width: 190px; }
-
-
-/* Throne Page */
-#header { 
-	width: 922px !important;
-	margin-left: 8px;
-	position: relative !important;
-	background-color: rgba(145, 145, 145, 0.1);
-}
-
-#header-navigation { tex-align: center; }
-
-#header2 { display: none; }
-
-#middle {
-	background-image: none;
-	box-shadow: none;
-}
-
-#resource-bar, .game-header, .game-content, .two-column-stats { 	
-	width: 690px !important;
-	margin: 0 auto;
-	float: left;
-}
-
-#resource-bar {
-	border: 1px solid grey;
-	font-size: 0.9em;
-	line-height: 2em;
-	height: 4em;
-}
-
-#resource-bar thead tr th { font-weight: bold; }
-
-.game-header h1 { 
-	display: inline-block; 
-	float: none; 
-	font-size: 1.2em; 
-	margin: 1em;
-}
-
-#throne-game-message p, #throne-monarch-message p {
-	background-color: rgba(145, 145, 145, 0.1);
-	border-radius: 5px;
-	padding: 1em;
-	margin-top: -0.5em;
-}
-
-#throne-monarch-message p { font-weight: bold; }
-
-.game-content h2 { 
-	font-size: 1.3em;
-	line-height: 1.3em;
-	padding: 1em 0;
-}
-
-.game-content table {
-	background-color: rgba(145, 145, 145, 0.1);
-	border: none !important;
-	border-radius: 5px;
-	padding: 1em;
-	width: 660px !important;
-	margin-left: 20px !important;
-	margin-bottom: 1em !important;
-}
-
-.game-content p { 
-	border: none !important;
-	text-align: justify;
-}
-
-.two-column-stats tbody { padding: 1em 0; margin-bottom: 1em; }
-
-.game-content table.two-column-stats th { 
-	text-align: left;
+.change-kingdom-form {
+	top: 3px !important;
 	width: 20%;
 }
 
-#game-navigation {
-	background-color: rgba(145, 145, 145, 0.1);
-	line-height: 1em;
-	padding-top: 1em;
-	border-radius: 5px;
+.game-content table.two-column-stats th, .game-content table.two-column-stats td {
+	width: 25%;
+	font-size: 1.4rem;
 }
 
-#game-navigation-right2 { 
-	background-color: rgba(145, 145, 145, 0.1);
-	height: auto !important;
-	width: 100px !important;
-	margin-left: -40px;
-	line-height: 1.7em; 
-	border-radius: 5px;
+.game-content th, .game-content td {
+	padding: 5px;
+	font-size: 1.2rem;
 }
 
-#game-navigation-right2 .button-link, #game-navigation-right2 br { display: none !important; }
-
-form table { float: left; }
-
-.message { 
-	background-color: rgba(145, 145, 145, 0.1); 
-	border-radius: 5px;
-	width: 645px;
-}
-.lobby-panel a, .game-content a { color: #45ACF6; }
-.good { color: #82FA58; }
-.negative, .bad { color: #E02626; }
-
-.advice-message { 
-	color: #FFF;
-	margin-left: 150px;
-	text-align: center !important;
+#clone_kingdom td {
+	padding: 5px 0;
 }
 
-.warning { margin-left: 150px; }
+#clone_kingdom th {
+	letter-spacing: 0;
+	text-transform: none;
+}
 
+.order-icon {
+	height: 0 !important;
+	width: 0 !important;
+}
 
-/* Kingdom Page */
-.game-content form.change-kingdom .change-kingdom-heading {
-	width: 100%;
-	margin-left: 0;
+.order-icon::before {
+	content: "⇅";
+	font-weight: normal;
+	padding-left: 2px;
+}
+
+/* Kingdom Intel */
+#newintel {
+	max-height: 80vh;
+}
+
+#newintel .header th, #newintel td {
+	font-size: 1rem;
+	letter-spacing: 1.5px;
+}
+
+#newintel td font {
+	color: #eeeeee !important;
+}
+
+#newintel td img {
+	display: none;
+}
+
+#newintel .header th {
+	padding: 0 10px;
+}
+
+#newintel .header .order-icon {
+	display: inline-block;
+}
+
+#newintel tr {
+	color: #eeeeee !important;	
+}
+
+#newintel tr:nth-child(odd) {
+	background-color: #111111 !important;	
+}
+
+#newintel tr:nth-child(even) {
+	background-color: #222222 !important;	
+}
+
+/* News */
+.news-legend {
+	margin-bottom: 15px;
 	margin-top: 0;
-	padding-bottom: 0;
-	text-align: center;
 }
 
-.game-content form.change-kingdom .change-kingdom-nav a { font-size: 0.8em; }
-
-.game-content form.change-kingdom .change-kingdom-form { top: 20px !important; }
-
-.game-content form.change-kingdom.change-kingdom-target #change-kingdom-button { top: 0px; }
-
-#change-kingdom-button { 
-	width: 30px; 
-	margin: 0 5px; 
-	height: 24px !important;
-	border: 0 none;
-	border-radius: 2px;
-	background-color: #2C86C7;
-	color: #E7E2DA;
-	padding: 0;
-	font-size: 1em;
+#news {
+	margin-top: 15px;
 }
 
-span[class="advice-message"] { margin-left: 0; }
-
-.province-flag .flagpole { background: url('./images/province_profile/flagpole.png') no-repeat; }
-.province-flag .flag-image .default-flag { background: url('./images/province_profile/default_flag.png') no-repeat; }
-.motto { background: url('./images/province_profile/scroll.png') no-repeat; }
-
-#sortkd0, #sortkd1, #sortkd2, #sortkd3, 
-#sortkd4, #sortkd5, #sortkd6, #sortkd7, 
-.province-name a { color: #FFF; }
-
-.protected, .protected a,
-.intel-fresh { color: #99ffbb !important; }
-.monarch, .monarch a,
-.at-war,
-.intel-rotten { color: #F28585 !important; }
-.chamberlain, .chamberlain a,
-.intel-stale { color: #FFC583 !important; }
-.you, .you a { color: #45acf6 !important; }
-
-.dip-status { color: #000; }
-
-.dip-status-NORMAL { background-color: #01DF01; }
-
-.dip-status-UNFRIENDLY { background-color: #FFBF00; }
-
-.dip-status-HOSTILE {
-    background-color:#FF4000;
-    background-image: url(./images/hostile_meter/hostile_gradient.png);
-    background-repeat:repeat-y;
+.news-legend span {
+	font-size: 1rem;
+	margin: 0 5px
 }
 
-.dip-status-WAR { background-color: #FF0000; }
-
-.own-meter-value { background-image: url(./images/hostile_meter/up.png); }
-
-.their-meter-value { background-image: url(./images/hostile_meter/down.png); }
-
-.war-button-meter-value { background-image: url(./images/hostile_meter/war.png); }
-
-#hostility-meter-example { background-image: url(./images/hostile_meter/example.png); }
-
-#id_taunt_top_image { color: white; }
-
-
-/* News Page */
-td.news-incident-type {
-	background-position: center center !important;
-	background-repeat: no-repeat !important;
+.news-intra-kingdom-conflict::before {
+	content: "✁";
+	font-size: 1.5rem;
+	padding: 0 5px;
 }
 
-.news-legend span.news-aid:before { content: url(./images/kingdom_news/aid_inline.png); }
-.news-legend span.news-intra-kingdom-conflict:before { content: url(./images/kingdom_news/intra_kingdom_conflict_inline.png); }
-.news-legend span.news-actions-against-our-kingdom:before { content: url(./images/kingdom_news/actions_against_our_kingdom_inline.png); }
-.news-legend span.news-actions-by-our-kingdom:before { content: url(./images/kingdom_news/actions_by_our_kingdom_inline.png); }
-.news-legend span.news-dragon:before { content: url(./images/kingdom_news/dragon_inline.png); }
-.news-legend span.news-obituaries:before { content: url(./images/kingdom_news/obituaries_inline.png); }
-.news-legend span.news-relations:before { content: url(./images/kingdom_news/relations_inline.png); }
-.news-province-modification:before { content: url(./images/kingdom_news/province_modification_inline.png); }
-td.news-aid { background-image: url(./images/kingdom_news/aid.png); }
-td.news-intra-kingdom-conflict { background-image: url(./images/kingdom_news/intra_kingdom_conflict.png); }
-td.news-actions-against-our-kingdom { background: url(./images/kingdom_news/actions_against_our_kingdom.png); }
-td.news-actions-by-our-kingdom { background-image: url(./images/kingdom_news/actions_by_our_kingdom.png); }
-td.news-dragon { background-image: url(./images/kingdom_news/dragon.png); }
-td.news-obituaries { background-image: url(./images/kingdom_news/obituaries.png); }
-td.news-relations { background-image: url(./images/kingdom_news/relations.png); }
-td.news-province-modification { background-image: url(./images/kingdom_news/province_modification.png); }
-
-.news-incident-report { 
-	text-align: left;
-	line-height: 2em;
+.news-relations::before {
+	content: "☮";
+	color: #ffed78;
+	font-size: 1.5rem;
+	padding: 0 5px;
 }
 
-
-/* Explore Page */
-#btnExplore { width: 460px; }
-#id_num_acres { width: 50px; }
-
-
-/* Science Page */
-.four-digit-input { width: 50px !important; }
-
-
-/* Military Page */
-.selector { background: none; }
-
-
-/* Mystics Page */
-label[for="id_spell"] {
-	position: absolute;
-	left: 158px;
-	margin: -30px 0 0 14px;
+.news-actions-against-our-kingdom::before {
+	content: "⚔";
+	color: #f56767;
+	font-size: 1.5rem;
+	padding: 0 5px;
 }
 
-.selector { font-size: 1em !important; }
-
-#id_spell, #id_operation { 
-	margin: 0 0 0 3px;
-	border-radius: 5px;
-	border: none;
-	padding: 0.2em;
-    font-size: 0.7em;
-    text-align: center;
-    width: 190px;
+.news-dragon::before {
+	content: "♅";
+	color: #a1e882;
+	font-size: 1.5rem;
+	padding: 0 5px;
 }
 
-#uniform-id_spell { margin-top: 10px; }
-#uniform-id_target_province select, #uniform-id_attack_type select, #uniform-id_modify_attack_time select { margin-left: 3px !important; }
-#uniform-id_target_province select option, #uniform-id_attack_type select option, #uniform-id_modify_attack_time select  option { padding-left: 1em; }
-#id_spell optgroup { padding-top: 0em; }
-#id_spell optgroup option, #id_operation optgroup option { 
-	padding: 0.5em 0 0 1em;
+.news-ritual::before {
+	content: "☥";
+	color: #ffd278;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-actions-by-our-kingdom::before {
+	content: "⚔";
+	color: #6bdfff;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-aid::before {
+	content: "✛";
+	color: #ff9999;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-obituaries::before {
+	content: "✝";
+	color: #bababa;
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-province-modification::before {
+	content: "⚒";
+	font-size: 1.5rem;
+	padding: 0 5px;
+}
+
+.news-incident-type {
+	height: 20px;
+	width: 20px;
+	padding: 0 0 0 8px !important;
+	font-size: 1.6rem;
+}
+
+.news-incident-date {
+	width: 136px;
+}
+
+.news-incident-report {
 	text-align: left;
 }
 
-.helptext { font-size: 0.8em; }
-
-
-/* Sorcery Page */
-.game-content form.change-kingdom.change-kingdom-target .change-kingdom-form {
-	position: relative;
-	width: 100%;
-	top: 0 !important;
+/* Explore */
+#btnExplore {
+	width: 168%;
+	margin-left: -68% !important;
+	margin-bottom: 0;
 }
 
-label[for="id_target_province"] { white-space: nowrap; }
-
-#uniform-id_target_province { margin-left: 8px; }
-
-
-/* Thievery Page */
-form input[id="id_quantity"] { 
-	width: 60px !important;
-	margin-left: 10px;
+/* Growth */
+#hideshow {
+	margin: 20px !important;
 }
 
-#idallyourthieves {
-	width: 37px;
+/* Sciences */
+input[name="reassign"], input[name="allocate"] {
+	margin-bottom: 50px !important;
+}
+
+.scientist-type div.selector select, .scientist-type div.selector option, .scientist-type div.selector span {
+	width: 158px !important;
+}
+
+/* Military */
+.data th {
+	font-size: 1rem !important;
+	font-weight: normal !important;
+}
+
+/* Wizards */
+.game-content ul {
 	text-align: center;
-	margin-right: 7px;
+	margin: 0 0 20px 0;
 }
 
+/* Mystics */
+.helptext {
+	font-size: 1rem;
+	display: block;
+}
 
-/* War Room Page */
-tr#calculator-separator { border: 1px dashed #fff; }
-#id_find_target { width: 300px; }
-.five-digit-input { width: 100px !important; }
+#spellslist {
+	margin-top: 20px;
+}
 
+/* Thievery */
+form [id='10thief'], form [id='10proc'], form [id='100proc'], #calc { 
+	font-size: 1.3rem !important;
+	width: 65px !important;
+	height: 22px !important;
+	padding: 0 !important;
+	margin: 0 0 3px 5px !important;
+	border-radius: 3px !important;
+}
+
+/* War Room */
+.form br {
+	display: block;
+}
+
+#autodef {
+	margin-right: 4px important!;
+}
+
+#calculator-separator {
+	border-top: none !important;
+	outline: 1px dashed #ffd17a;
+}
 
 /* Aid */
-.six-digit-input { width: 100px !important; }
+#showaids {
+	text-transform: none;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
 
+#id_land {
+	margin-left: -32px !important;
+}
 
 /* Mail */
-#id_subject { margin-right: 24px; }
+strong {
+	font-size: 1.5rem;
+	font-family: 'Open Sans', sans-serif;
+}
 
+.reportable, .mail-view {
+	width: 100% !important;
+}
+
+.formatted-text {
+	outline: 1px dashed #ffd17a;
+	padding: 15px !important;
+}
+
+.warning {
+	text-align: center !important;
+	margin: 20px 0 !important;
+}
+
+.current.page {
+	color: #ffd17a;
+	padding: 0 10px;
+}
+
+.pagination {
+	margin-bottom: 30px;
+}
+
+form input[type=submit], .button-link {
+	margin: 0 20px 0 -2px;
+	font-size: 1.3rem;
+}
 
 /* Forum */
-.subject, #id_subject { width: 551px !important; }
-.wysiwyg { margin-right: 24px;}
-
-.mail-view p { 
-	margin-left: 0;
-	text-align: left;
+.game-content table.mail-view tr td {
+	font-size: 1.4rem;
+	padding: 10px;
 }
 
-.mail-view #news { 
-	width: 460px !important;
-	font-size: 0.8em;
+#id_subject {
+	width: 99%;
 }
 
-body[class="wysiwyg"] { font-size: 0.9em; }
-
-input[value="Unstick"], input[value="Stick"], input[value="Close"], input[value="Delete"] {
-	background-color: transparent !important;
-	color: #45acf6 !important;
-	font-size: 0.8em !important;
-	margin: 0.1em !important;
-	padding: 0.1em !important;
-	width: 40px !important;
+#id_body {
+	width: 95%;
+	outline: none;
 }
 
-.forum-delete-button {
-	position: relative;
-	bottom: -9px;
-	left: -5px;
+.mail-view br {
+	display: block;
 }
 
-.forum-edit-button {
-	font-size: 0.8em;
+.mail-view p {
+	margin: 0;
 }
 
-
-/* Preferences Page */
-.preference-box p { margin-left: 30px; }
-
-
-/* State Page */
-.sub-total { background-color: rgba(145, 145, 145, 0.1) !important; }
-
-li[class="advice-message"] { margin-left: 100px; }
-
-
-/* Learn Page */
-.schedule td { font-size: 0.7em; }
-
-
-/* Monarchy */
-#id_monarch_option-name { width: 450px; }
-
-#id_monarch_option-message {
-	width: 450px;
-	padding: 1em;
-	font-size: 1em;
+/* Preferences */
+.preference-box h3 {
+	margin: 0 10px !important;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
 }
 
-#id_propose-kingdom { margin: 0 5px; }
-
-
-/* Chat */
-.reverb-widget {
-	bottom: 0 !important;
-	top: auto !important;
-	box-shadow: unset !important;
+.preference-box {
+	outline: 1px dashed;
+	padding: 10px 0 !important;
+	margin: 15px 0 !important;
 }
 
-.reverb-widget iframe { height: 375px !important; }
-
-
-/* Upoopu */
-#upoopu_extension, #upoopu_extension_credentials { top: 0; }
-
-
-/* Ultima */
-form input[type="submit"], .button-link {
-	border-radius: 5px;
-	border: none;
+.preference-box .advice-message {
+	margin: 10px 0 !important;
 }
 
-#Uniquestextarea {
-	width: 660px !important;
-	margin-left: 10px;
-	border-radius: 5px;
-	color:#000 !important;
+/* Misc. */
+#loadstatus {
+	outline: 1px dashed;
+	width: 70%;
+	margin: 10px auto;
+	text-transform: uppercase;
+	padding: 0 0 22px 0;
+	color: #ffd17a;
 }
 
-#ID_Uniques1, #ID_Uniques2, #ID_Uniques3 { margin: 5px; }
-
-#SpellsList { 
-	float: left; 
-	width: 100%;
+.message {
+	outline: 1px dashed;
+	padding: 2em;
 }
 
-#SpellsList .good { color: #82FA58; }
-#SpellsList .bad { color: #E02626; }
-
-#SpellsList table {
-	width: auto !important;
-	background-color: transparent;
+#right-column {
+	width: 15%;
+	margin-top: -620px;
 }
 
-
-/* uTools */
-th[colspan="7"] { display: none; }
-#rescell1, #rescell2, #rescell3 {
-	background-color: #262626 !important;
-	text-align: center !important;
-	padding: 5px 0;
-	border-bottom: 1px solid grey;
+.advice-message {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.4rem;
+	font-weight: normal;
 }
 
-#rescell2 { padding-left: 50px; }
-
-#spnWait { line-height: 2em; }
-
-#spnWait table { 
-	width: inherit !important;
-	margin-right: 15px !important;
+.good, .protected, .advice-message {
+	color: #a1e882;
 }
 
-#spnWait thead th { white-space: nowrap; }
-
-#divFilterKDNews { border: none !important; }
-#divFilterKDNews span { font-size: 0.8em; }
-
-.checker {
-	border: none;
-	padding-left: 15px;
+.bad, .monarch, .negative, .warning {
+	color: #f56767;
 }
 
-/* Test */
-body {
-	background: #222222;
+.you {
+	color: #ffed78;
+}
+
+.chamberlain {
+	color: #ffd278;
+}
+
+#aidnum {
+	color: #f56767;
+	letter-spacing: 1px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+#footer {
+	width: auto;
+	font-size: 0.7em;
 }
