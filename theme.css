@@ -434,7 +434,7 @@ a, a:visited {
 
 #game-navigation .current-date {
 	margin-bottom: 20px;
-	text-align: center-left;
+	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	font-size: 1.1em;
@@ -442,7 +442,8 @@ a, a:visited {
 
 #game-navigation .navigation {
 	margin-bottom: 20px;
-	text-align: center-left;
+	text-align: center;
+	text-decoration: underline;
 }
 
 .munkbutton {
