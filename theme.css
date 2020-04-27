@@ -3,6 +3,7 @@
 
 /* Global */
 body {
+	background-image: url('./images/lines-BG.jpg');
 	background: #111111;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 1.5rem;
@@ -115,7 +116,7 @@ button {
 }
 
 a, a:visited {
-	color: #ffd17a;
+	color: #E7E2DA;
 	text-decoration: none;
 }
 
