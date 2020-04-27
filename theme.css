@@ -444,8 +444,7 @@ a, a:visited {
 #game-navigation .navigation {
 	margin-bottom: 20px;
 	text-align: center;
-	text-decoration: underline;
-	color: #E7E2DA
+	font-weight: bold;
 }
 
 .munkbutton {
